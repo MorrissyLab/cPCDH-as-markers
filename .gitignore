@@ -3,3 +3,6 @@
 **/.DS_Store
 *.code-workspace
 .vscode
+data/GeoMean_SD_Max.rds
+data/mclust_binaryExpr.rds
+results
