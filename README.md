@@ -2,6 +2,14 @@
 
 #### For more information, please visit [here](https://morrissylab.shinyapps.io/cpcdh/)
 
+#### Prerequisite
+  * EnvStats
+  * fmsb
+  * ggplot2
+  * mclust
+  * scales
+  * stringr
+
 #### Session Info
 ```
 R version 4.2.0 (2022-04-22)
