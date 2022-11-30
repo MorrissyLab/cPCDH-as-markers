@@ -81,7 +81,7 @@ summaryMatL <- lapply(seq_along(dataL), function(idx) {
                 .plotRadarChart(data = beta, title = "Beta")
                 mtext(side = 3, line = 2.5, at = 0, cex = 1.1, paste0(cohort, ", N=", ncol(dat)), font = 2) # Title
                 .plotRadarChart(data = gamma, title = "Gamma")
-                dev.off()
+        dev.off()
 
         return(cpcdh)
 })
