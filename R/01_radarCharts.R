@@ -23,7 +23,7 @@ col <- c("#E7B800", "#FC4E07", "black") # GeoMean, SD, MAX
                 centerzero = F,
         # Polygon options
                 pcol = col, # line color
-                pfcol = c(scales::alpha(col[1], 0.5), scales::alpha(col[2], 0.3), NA), # fill color
+                pfcol = c(scales::alpha(col[1], 0.5), scales::alpha(col[1], 0.3), NA), # fill color
                 plwd = 1, # line width
                 plty = c(1, 1, 2), # line type
         # Grid options:

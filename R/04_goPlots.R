@@ -112,8 +112,8 @@ returnNoMeaning <- lapply(seq_along(dataL), function(idx) {
                                                 geom_point(data=data, aes(x=OPT, y=T3, size=Size_cut), color=rgb(0, 0, 0, 0.7)) +
                                                 scale_y_continuous(breaks=c(length(pcdhGeneIdx):1), labels=names(pcdhGeneIdx)) +
                                                 scale_size_manual(name="No. of Samples", values = manual_size * 2, labels=c("3-5","6-10","11-15",">15")) +
-                                                labs(title=paste0("PCDH", names(pcdhGeneIdx)[which(pcdhGeneIdx == jdx)], " in ", cohort),
-                                                        x="OPTs", y = "cPCDH") + 
+                                                labs(title=paste0(names(pcdhGeneIdx)[which(pcdhGeneIdx == jdx)], " in ", cohort, " (", nrow(dat), ")"),
+                                                        x="Triplet", y = "cPCDH") + 
                                                         theme_bw() +
                                                         theme(
                                                         axis.line = element_line(colour = "black"),
