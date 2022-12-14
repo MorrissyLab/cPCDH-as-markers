@@ -16,11 +16,6 @@ geneOne <- "PCDHA4"
 geneTwo <- "PCDHGB7"
 
 #### #### #### #### #### #### #### #### #### #### #### ####
-library(stringr)
-library(survival)
-library(survminer)
-library(RColorBrewer)
-
 # User defined functions
 .reform <- function(x) { # TCGA-GBM
         buff <- unlist(stringr::str_split(x, "\\."))
@@ -30,6 +25,12 @@ library(RColorBrewer)
         buff <- unlist(stringr::str_split(x, "\\."))
         return(paste0(buff[1], "-", buff[2], "-", buff[3], "-", str_sub(buff[4], 1, 2)))
 }
+
+#### #### #### #### #### #### #### #### #### #### #### ####
+library(stringr)
+library(survival)
+library(survminer)
+library(RColorBrewer)
 
 isoformUsages <- readRDS(file.path(dataDir, profileFileName))
 overallSurvival <- readRDS(file.path(dataDir, osFileName))

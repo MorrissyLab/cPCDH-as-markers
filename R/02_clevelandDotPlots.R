@@ -40,11 +40,11 @@ for (idx in seq_along(fullMat$Gene)) { # foreach gene
                 levels = rev(c("GTEx", "CPTAC-GTEx", "BrainSpanI", "BrainSpanII", "BrainSpanIII", # non-malignant samples
                         "TCGA-GBM", "CPTAC-GBM", "TFRI-GBM", "TCGA-LGG", # adult brain tumors
                         "CBTN-ATRT", "CBTN-CP", "CBTN-CPP", "CBTN-DIPG", "CBTN-DNET", "CBTN-EPD", "CBTN-GG", "CBTN-HGG", "CBTN-LGG", "CBTN-MB", "CBTN-MNG", "CBTN-PNF", "CBTN-SWM", # Ped-brain tumors
-                        "Mayo-PDX", "TFRI-Xeno", "TFRI-BTIC")),
+                        "Mayo-PDX", "TFRI-Xeno", "TFRI-BTIC")), # preclinical models
                 labels = rev(c("GTEx (230)", "CPTAC-GTEx (9)", "BrainSpan I (231)", "BrainSpan II (43)", "BrainSpan III (227)", # non-malignant samples
                         "TCGA-GBM (152)", "CPTAC-GBM (82)", "TFRI-GBM (44)", "TCGA-LGG (530)", # adult brain tumors
                         "CBTN-ATRT (25)", "CBTN-CP (10)", "CBTN-CPP (21)", "CBTN-DIPG (15)", "CBTN-DNET (21)", "CBTN-EPD (59)", "CBTN-GG (33)", "CBTN-HGG (83)", "CBTN-LGG (212)", "CBTN-MB (95)", "CBTN-MNG (22)", "CBTN-PNF (13)", "CBTN-SWM (14)", # Ped-brain tumors
-                        "Mayo-PDX (51)", "TFRI-Xeno (13)", "TFRI-BTIC (61)"))
+                        "Mayo-PDX (51)", "TFRI-Xeno (13)", "TFRI-BTIC (61)")) # preclinical models
         )
 
         clevelandDotPlot <- ggplot(df) +

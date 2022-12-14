@@ -73,7 +73,7 @@ labels <- labels[colnames(prop), ]
 newRowNames <- labels$labels
 newColNames <- str_replace_all(str_replace_all(rownames(prop), "PCDH", ""), "\\$", "-")
 
-heatmap1 <- Heatmap(
+heatmapTriplets <- Heatmap(
         t(prop),
         name = "Proportion",
         show_row_names = TRUE,
@@ -91,7 +91,7 @@ heatmap1 <- Heatmap(
         column_labels = newColNames
 )
 pdf(file.path(resultsDir, "TopTenTriplets.pdf"), width=20, height=10)
-draw(heatmap1)
+draw(heatmapTriplets)
 dev.off()
 
 # Isoform usage from triplets above in heatmap
@@ -126,7 +126,7 @@ topAnnotation <- HeatmapAnnotation(
 clusterNames <- c("Alpha", "Beta", "Gamma")
 names(clusterNames) <- c("A", "B", "G")
 
-heatmap2 <- Heatmap(
+heatmapIsoforms <- Heatmap(
         t(prop),
         name = "Proportion",
         show_row_names = TRUE,
@@ -143,7 +143,7 @@ heatmap2 <- Heatmap(
 )
 
 pdf(file.path(resultsDir, "TopTenTriplets_isoforms.pdf"), width=10, height=10)
-draw(heatmap2)
+draw(heatmapIsoforms)
 dev.off()
 
 q("no")

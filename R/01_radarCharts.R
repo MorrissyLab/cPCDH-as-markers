@@ -10,7 +10,7 @@ resultsDir <- file.path("../results")
 
 profileFileName <- "cPCDH_expr_25_cohorts.rds"
 
-col <- c("#E7B800", "#FC4E07", "black") # GeoMean, SD, MAX
+col <- c("#E7B800", "#FC4E07", "black") # GeoMean, SD, MAX, respectively
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 # Wrapper
@@ -53,7 +53,7 @@ summaryMatL <- lapply(seq_along(dataL), function(idx) {
 
         sdData <- apply(dat, 1, sd, na.rm=T)
         maxData <- apply(dat, 1, max, na.rm=T)
-        dat[dat == 0] <- 1.0E-08
+        dat[dat == 0] <- 1.0E-08 # pseudovalue
         mData <- apply(dat, 1, EnvStats::geoMean, na.rm=T)
         
         cpcdh <- data.frame(Gene = names(mData), mData = mData, sdData = sdData, maxData = scales::rescale(maxData, to=c(0, 0.3), from=c(0, 1)))
